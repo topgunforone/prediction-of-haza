@@ -135,9 +135,6 @@ if model_id ==1:
     drop_2 = Dropout(0.4)(conv_2)
     # model.add(Flatten())
     reshape_0 = Reshape(target_shape=(-1,1))(drop_2)
-    ################
-    #数据拉直代码
-    ################
 
     rnn_0 = LSTM(64, return_sequences=True)(reshape_0)
     rnn_1 = LSTM(64, return_sequences=True)(rnn_0)
